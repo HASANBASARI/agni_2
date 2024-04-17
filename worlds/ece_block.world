@@ -79,9 +79,6 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
     </scene>
-    <audio>
-      <device>default</device>
-    </audio>
     <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
@@ -93,7 +90,7 @@
     <model name='ece_block'>
       <link name='link_0'>
         <inertial>
-          <mass>1</mass>
+          <mass>1000</mass>
           <inertia>
             <ixx>0.166667</ixx>
             <ixy>0</ixy>
@@ -104,23 +101,19 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-0 1e-06 0 0 -0 -3.1408</pose>
+        <pose>-0 0 0 0 -0 0</pose>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
         <visual name='visual'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/base/ros2_ws/src/agni_bot_ros2/agni_bot/meshes/ece_block.dae</uri>
+              <uri>/home/robot/dev_ws/src/agni_2/worlds/ece_block.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <material>
-            <lighting>1</lighting>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-            <shader type='pixel'/>
-          </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
@@ -130,7 +123,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/base/ros2_ws/src/agni_bot_ros2/agni_bot/meshes/ece_block.dae</uri>
+              <uri>/home/robot/dev_ws/src/agni_2/worlds/ece_block.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -180,27 +173,24 @@
             </contact>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
       </link>
-      <static>0</static>
+      <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>0.73538 -2.5278 0 0 -0 0</pose>
+      <pose>0.225652 2.56721 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>125 998000000</sim_time>
-      <real_time>127 494068436</real_time>
-      <wall_time>1712133675 679226683</wall_time>
-      <iterations>125998</iterations>
+      <sim_time>72 56000000</sim_time>
+      <real_time>72 212685588</real_time>
+      <wall_time>1713090921 188106644</wall_time>
+      <iterations>72056</iterations>
       <model name='ece_block'>
-        <pose>0.735375 -2.52781 -0.000235 0.001372 4.5e-05 -0</pose>
+        <pose>0.225652 2.56721 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose>0.735375 -2.52781 -0.000235 -0.001372 -4.4e-05 -3.1408</pose>
+          <pose>0.225652 2.56721 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.001201 0.000806 -7.40752 -0.018371 -1.29271 -3.14155</acceleration>
-          <wrench>-0.001201 0.000806 -7.40752 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -219,7 +209,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-0.491777 1.82905 13.7151 3.14159 1.57079 3.14159</pose>
+        <pose>13.2662 -17.8988 6.25515 0 0.275643 2.35619</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
